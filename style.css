@@ -9,7 +9,7 @@ li {
 }
 header {
     width: 100vw;
-    height: 600px;
+    height: 50%;
     background-color: #1F2937;
     color: white;
     display: flex;
@@ -19,7 +19,7 @@ button {
     cursor: pointer;
 }
 
-/* Pierwsza linia headera */
+/* Pierwsza linia headera - Logo + navigacja */
 .first-line {
    display: flex;
    justify-content: space-between;
@@ -30,7 +30,7 @@ nav {
 }
 nav ul{
    display: flex;
-   gap: 30px;
+   gap: 1.5em;
 }
 nav li:hover {
     border-bottom: 1px solid #3882F6;
@@ -39,18 +39,25 @@ nav li:hover {
 }
 #logo {
     margin-left: 200px;
+    font-size: 24px;
+    font-weight: 900;
+    color: #F9FAF8;
 }
 
-/* Druga linia headera */
+
+/* Druga linia headera - Tekst powitalny + duży obraz */
 .second-line {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 50px;
+    gap: 2em;
+    padding: 7em 0;
  }
 .introduce {
     max-width: 600px;
     margin-left: 200px;
+    flex: 1;
+    padding: 10px;
 }
 .introduce .p-title{
     font-size: 48px;
@@ -75,12 +82,24 @@ nav li:hover {
     font-size: large;
 }
 .large-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 200px;
+    flex: 1;
+    height: 350px;
+}
+.img-size {
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 .large-image img {
-    width: 600px;
-    height: 250px;
-    border: 1px solid navy;
+   object-fit: fill;
+   width: 100%;
+   height: auto;  
 }
 
 /* sekcja main i 4 obrazki */
@@ -90,6 +109,10 @@ main {
     align-items: center;
     flex-wrap: wrap;
     height: 500px;
+    background-image: url(/fotos/d13.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 .main-photos img {
     width: 150px;
@@ -126,8 +149,7 @@ width: 100%;
 
 /* sekcja z cytatem */
 aside {
-    height: 300px;
-    width: 100vw;
+    padding: 3em 7em;
     background-color: #bcbfc4;
     display: flex;
     justify-content: center;
@@ -139,18 +161,12 @@ blockquote {
     padding: 0.5em 10px;
     width: 50%;   
 }
-
-
 blockquote p {
     font: italic 22px georgia, serif;
     line-height: 1.3em;
     margin-left: 1em;
     padding-left: 1em;
 }
-blockquote p::first-line {
-  margin-left: 20px;
-}
-
 blockquote p::before {
     content: '\201C';
 }
@@ -168,11 +184,18 @@ figcaption {
    display: flex;
    justify-content: center;
    align-items: center;
+   padding: 40px 0;
+   background-image: url(/fotos/d77.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 .s-container {
-    width: 1200px;
+    width: 80vw;
+    padding: 1.2em;
     height: 150px;
     background-color: #3882F6;
+    opacity: 0.8;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -181,6 +204,7 @@ figcaption {
 }
 .sign-info {
     color: white;
+    font-size: 24px;
 }
 .sign-button {
     background-color: #3882F6;
@@ -208,4 +232,5 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1.2em 0;
 }
